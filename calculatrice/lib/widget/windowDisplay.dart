@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class WindowDisplay extends StatelessWidget {
-  final List<String> listAnswer;
+  final String display;
 
-  WindowDisplay(this.listAnswer);
+  WindowDisplay(this.display);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class WindowDisplay extends StatelessWidget {
         ),
       ),
       child: Text(
-        listAnswer.join(),
+        display,
         style: TextStyle(
           fontSize: 25,
         ),

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../function/numButton.dart';
+import 'buttonNumPad.dart';
 
 class NumPad extends StatelessWidget {
-  final Function addListNumber;
+  final Function addListButtonInput;
 
-  NumPad(this.addListNumber);
+  NumPad(this.addListButtonInput);
 
   @override
   Widget build(BuildContext context) {
@@ -14,43 +14,45 @@ class NumPad extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            numButton(addListNumber, "/", "/", null),
-            numButton(addListNumber, "*", "*", null),
-            numButton(addListNumber, "-", "-", null),
-            numButton(addListNumber, "R", "R", null),
+            ButtonNumPad(addListButtonInput, "/"),
+            ButtonNumPad(addListButtonInput, "*"),
+            ButtonNumPad(addListButtonInput, "-"),
+            ButtonNumPad(addListButtonInput, "R"),
           ],
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            numButton(addListNumber, "7", null, 7),
-            numButton(addListNumber, "8", null, 8),
-            numButton(addListNumber, "9", null, 9),
-            numButton(addListNumber, "^", "^", null),
+            ButtonNumPad(addListButtonInput, "7"),
+            ButtonNumPad(addListButtonInput, "8"),
+            ButtonNumPad(addListButtonInput, "9"),
+            ButtonNumPad(addListButtonInput, "^"),
           ],
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            numButton(addListNumber, "4", null, 4),
-            numButton(addListNumber, "5", null, 5),
-            numButton(addListNumber, "6", null, 6),
-            numButton(addListNumber, "+", "+", null),
+            ButtonNumPad(addListButtonInput, "4"),
+            ButtonNumPad(addListButtonInput, "5"),
+            ButtonNumPad(addListButtonInput, "6"),
+            ButtonNumPad(addListButtonInput, "+"),
           ],
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            numButton(addListNumber, "1", null, 1),
-            numButton(addListNumber, "2", null, 2),
-            numButton(addListNumber, "3", null, 3),
-            numButton(addListNumber, "E", "E", null),
+            ButtonNumPad(addListButtonInput, "1"),
+            ButtonNumPad(addListButtonInput, "2"),
+            ButtonNumPad(addListButtonInput, "3"),
+            ButtonNumPad(addListButtonInput, "E"),
           ],
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            numButton(addListNumber, "0", null, 0),
+            ButtonNumPad(addListButtonInput, "0"),
+            ButtonNumPad(addListButtonInput, "("),
+            ButtonNumPad(addListButtonInput, ")"),
           ],
         )
       ],
